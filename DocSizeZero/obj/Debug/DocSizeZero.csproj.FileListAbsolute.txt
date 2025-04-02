@@ -1,0 +1,11 @@
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\bin\Debug\DocSizeZero.exe.config
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\bin\Debug\DocSizeZero.exe
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\bin\Debug\DocSizeZero.pdb
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.csproj.AssemblyReference.cache
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.LoginForm.resources
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.MenuForm.resources
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.Properties.Resources.resources
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.csproj.GenerateResource.cache
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.csproj.CoreCompileInputs.cache
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.exe
+D:\VS2019\ARCHIVE\C_ARCHIVE_SIZE_0\DocSizeZero\DocSizeZero\obj\Debug\DocSizeZero.pdb
