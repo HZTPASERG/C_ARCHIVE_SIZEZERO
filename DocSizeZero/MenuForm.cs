@@ -326,6 +326,7 @@ namespace DocSizeZero
             // Verificar si el Tag del nodo es un TreeNodeModel
             if (selectedNode.Tag is TreeNodeModel nodeModel)
             {
+                /*
                 // Verificar si el nodo pertenece a la tabla "DOCUMENT"
                 if (nodeModel.Table == "DOCUMENT")
                 {
@@ -345,6 +346,59 @@ namespace DocSizeZero
                         treeView.SelectedNode = e.Node;
                     }
                 }
+                */
+                ShowContenido(nodeModel);
+            }
+        }
+
+        // Mostrar el Contenido del Node Selecionado
+        private void ShowContenido(TreeNodeModel selectedNode)
+        {
+            try
+            {
+                // Limpiar el panel de vista previa
+                previewPanel.Controls.Clear();
+
+                // Crear un DataGridView
+                DataGridView grid = new DataGridView
+                {
+                    Dock = DockStyle.Fill,
+                    AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                    ReadOnly = true,
+                    AllowUserToAddRows = false,
+                    SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                };
+
+                // Rellenar el grid segun el tipo de nodo
+                List<TreeNodeModel> data = new List<TreeNodeModel>();
+
+                switch (selectedNode.Table)
+                {
+                    case "YEAR":
+                    case "MONTH":
+                    case "DAY":
+                        data = _databaseService.LoadChildNodes(selectedNode.Id);
+                        break;
+                    case "HOUR":
+                        data = _databaseService.GetDocumentsForNode(selectedNode.Id, documentTable);
+                        break;
+                    default:
+                        break;
+                }
+
+                // Convertir la lista a DataTable para asignarla al grid
+                if (data.Any())
+                {
+                    var bindingList = new BindingList<TreeNodeModel>(data);
+                    grid.DataSource = bindingList;
+                }
+
+                // Agregar el grid al panel de vista previa
+                previewPanel.Controls.Add(grid);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка відображення вмісту: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
